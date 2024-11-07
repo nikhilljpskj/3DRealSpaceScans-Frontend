@@ -42,7 +42,7 @@ import PageHome2 from "containers/PageHome/PageHome2";
 import ListingRealEstateMapPage from "containers/ListingRealEstatePage/ListingRealEstateMapPage";
 import ListingRealEstatePage from "containers/ListingRealEstatePage/ListingRealEstatePage";
 import ListingFlightsPage from "containers/ListingFlightsPage/ListingFlightsPage";
-import FooterNav from "components/FooterNav";
+// import FooterNav from "components/FooterNav";
 import useWindowSize from "hooks/useWindowResize";
 import PageHome3 from "containers/PageHome/PageHome3";
 import AdminDashboard from "containers/AdminDashboard/AdminDashboard";
@@ -142,7 +142,7 @@ const MyRoutes = () => {
                 <>
                   <Header />
                   <Component />
-                  {WIN_WIDTH < 768 && <FooterNav />}
+                  {/* {WIN_WIDTH < 768 && <FooterNav />} */}
                   <Footer />
                 </>
               }
