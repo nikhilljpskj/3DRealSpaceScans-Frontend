@@ -14,10 +14,10 @@ const ServiceFooter: React.FC<ServiceFooterProps> = ({
 }) => {
   return (
     <div className="container mx-auto my-10 sm:my-12 px-5 lg:px-10">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 p-8 rounded-xl">
+      <div className="flex flex-col items-center justify-between gap-6 md:gap-10 p-8 rounded-xl">
         
         {/* Booking Section */}
-        <div className="flex-1 text-center md:text-left space-y-3">
+        <div className="flex-1 text-center space-y-3">
           <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
             Ready to Get Started?
           </h3>

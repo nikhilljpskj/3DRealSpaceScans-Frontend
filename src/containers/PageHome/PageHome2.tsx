@@ -114,7 +114,7 @@ function PageHome2() {
           categories={SERVICES}
           categoryCardType="card4"
           itemPerRow={3}
-          heading="Our services"
+          heading="Our core services"
           subHeading="Discover Our 3D Services That Bring Spaces to Life"
           uniqueClassName="PageHome2_s1"
         />

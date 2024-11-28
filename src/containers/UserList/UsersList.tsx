@@ -3,7 +3,7 @@ import axios from "axios";
 import LeftNavbar from "containers/AdminNavbar/LeftNavbar";
 import TopNavbar from "containers/AdminNavbar/TopNavbar";
 import Input from "shared/Input/Input";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 interface User {
     id: number;
@@ -48,7 +48,6 @@ const UsersList: React.FC = () => {
         const user = users.find(u => u.id === userId);
         if (!user || !user.password) return;
 
-        // Confirm before updating
         const confirmUpdate = window.confirm("Are you sure you want to update this user's details?");
         if (!confirmUpdate) return;
 
@@ -57,7 +56,7 @@ const UsersList: React.FC = () => {
                 fullName: user.name,
                 email: user.email,
                 mobile: user.mobile,
-                password: user.password, // Ensure password hashing on the backend
+                password: user.password,
             });
             alert("User details updated successfully");
         } catch (error) {
@@ -66,7 +65,6 @@ const UsersList: React.FC = () => {
     };
 
     const handleRemove = async (userId: number) => {
-        // Confirm before removing
         const confirmRemove = window.confirm("Are you sure you want to remove this user?");
         if (!confirmRemove) return;
 
@@ -79,33 +77,33 @@ const UsersList: React.FC = () => {
     };
 
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-    
+
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-green-200 to-blue-300">
+        <div className="flex min-h-screen bg-gray-100">
             <LeftNavbar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 ml-64">
                 <TopNavbar sidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
                 <div className="p-8 mt-16">
                     <h2 className="text-3xl font-semibold text-gray-800 mb-6">User List</h2>
                     <div className="overflow-x-auto bg-white shadow-md rounded-lg">
-                        <table className="min-w-full">
-                            <thead>
-                                <tr className="text-left bg-gray-200">
-                                    <th className="border px-4 py-2">Name</th>
-                                    <th className="border px-4 py-2">Email</th>
-                                    <th className="border px-4 py-2">Phone Number</th>
-                                    <th className="border px-4 py-2">Update Password</th>
-                                    <th className="border px-4 py-2">Update</th>
-                                    <th className="border px-4 py-2">Remove</th>
+                        <table className="min-w-full border-collapse border border-gray-200 text-left text-sm">
+                            <thead className="bg-gray-100">
+                                <tr className="text-gray-700 uppercase text-xs font-medium tracking-wider">
+                                    <th className="border px-4 py-3">Name</th>
+                                    <th className="border px-4 py-3">Email</th>
+                                    <th className="border px-4 py-3">Phone Number</th>
+                                    <th className="border px-4 py-3">Update Password</th>
+                                    <th className="border px-4 py-3">Update</th>
+                                    <th className="border px-4 py-3">Remove</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className="divide-y divide-gray-200">
                                 {users.map((user) => (
-                                    <tr key={user.id} className="text-center border-b hover:bg-gray-50">
-                                        <td className="border px-4 py-2">{user.name}</td>
-                                        <td className="border px-4 py-2">{user.email}</td>
-                                        <td className="border px-4 py-2">{user.mobile}</td>
-                                        <td className="border px-4 py-2">
+                                    <tr key={user.id} className="hover:bg-gray-50">
+                                        <td className="border px-4 py-3">{user.name}</td>
+                                        <td className="border px-4 py-3">{user.email}</td>
+                                        <td className="border px-4 py-3">{user.mobile}</td>
+                                        <td className="border px-4 py-3">
                                             <Input
                                                 className="mt-1.5"
                                                 type="password"
@@ -113,17 +111,17 @@ const UsersList: React.FC = () => {
                                                 onChange={(e) => handlePasswordChange(user.id, e.target.value)}
                                             />
                                         </td>
-                                        <td className="border px-4 py-2">
+                                        <td className="border px-4 py-3">
                                             <button
-                                                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-150"
+                                                className="bg-blue-600 text-white text-sm px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150"
                                                 onClick={() => handleUpdate(user.id)}
                                             >
                                                 Update
                                             </button>
                                         </td>
-                                        <td className="border px-4 py-2">
+                                        <td className="border px-4 py-3">
                                             <button
-                                                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-150"
+                                                className="bg-red-600 text-white text-sm px-4 py-2 rounded-md hover:bg-red-700 transition duration-150"
                                                 onClick={() => handleRemove(user.id)}
                                             >
                                                 Remove
@@ -134,7 +132,7 @@ const UsersList: React.FC = () => {
                             </tbody>
                         </table>
                         {users.length === 0 && (
-                            <div className="py-8 text-center text-gray-600">
+                            <div className="py-8 text-center text-gray-500">
                                 No users found.
                             </div>
                         )}

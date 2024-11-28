@@ -15,7 +15,7 @@ const ScanToBIMPage: React.FC = () => {
 
       {/* Image Section */}
       <NcImage
-        className="w-full rounded-xl"
+        className="w-full max-w-4xl mx-auto rounded-xl"
         containerClassName="container my-10 sm:my-12"
         src="/assets/services/BIM.jpg" // Replace with your image path
         alt="Scan to BIM process illustration"
@@ -33,7 +33,7 @@ const ScanToBIMPage: React.FC = () => {
         </div>
         <div>
           <NcImage
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-sm mx-auto"
             src="/assets/services/BIM1.jpg"
             alt="What is Scan to BIM"
           />
@@ -50,7 +50,7 @@ const ScanToBIMPage: React.FC = () => {
             The Scan to BIM process begins with capturing the structure using a 3D laser scanner. This device collects millions of data points (point clouds) in a short span of time. These data points are then processed and converted into an accurate, as-built 3D model using tools like Autodesk Revit or other CAD formats.
           </p>
           <NcImage
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-sm mx-auto"
             src="/assets/services/BIM2.jpg"
             alt="How it works"
           />
@@ -67,7 +67,7 @@ const ScanToBIMPage: React.FC = () => {
       <section className="applications-section grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div>
           <NcImage
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-sm mx-auto"
             src="/assets/services/BIM3.jpg"
             alt="Applications of Scan to BIM"
           />
@@ -128,7 +128,7 @@ const ScanToBIMPage: React.FC = () => {
         </div>
         <div>
           <NcImage
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-sm mx-auto"
             src="/assets/services/BIM4.jpg"
             alt="Sustainability in Scan to BIM"
           />

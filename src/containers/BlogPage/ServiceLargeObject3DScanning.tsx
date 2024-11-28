@@ -63,82 +63,83 @@ const LargeObject3DScanningPage: React.FC = () => {
       </section>
 
       <section className="types-of-objects-section space-y-4">
-        <h2 className="text-2xl md:text-3xl font-semibold">What Types of Large Objects Can Be Scanned?</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/AIRCRAFT.jpg" // Replace with your image path
-              alt="Entire Aircraft"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Entire Aircraft</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/TREE.jpg" // Replace with your image path
-              alt="Trees"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Trees</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/WIND.jpg" // Replace with your image path
-              alt="Wind Turbines"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Wind Turbines</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/CARS.jpg" // Replace with your image path
-              alt="Cars and Trucks"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Cars and Trucks</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/Helicopters.jpg" // Replace with your image path
-              alt="Helicopters"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Helicopters</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/boat-hull.jpg" // Replace with your image path
-              alt="Boat Hulls"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Boat Hulls</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/tanks-vessels.jpg" // Replace with your image path
-              alt="Tanks & Vessels"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Tanks & Vessels</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/staircase.jpg" // Replace with your image path
-              alt="Staircases"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Staircases</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <NcImage
-              className="w-32 h-32 rounded-lg object-cover"
-              src="/assets/services/LO3D2.jpg" // Replace with your image path
-              alt="Statues"
-            />
-            <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Statues</p>
-          </div>
-        </div>
-      </section>
+  <h2 className="text-2xl md:text-3xl font-semibold">What Types of Large Objects Can Be Scanned?</h2>
+  <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/AIRCRAFT.jpg"
+        alt="Entire Aircraft"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Entire Aircraft</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/TREE.jpg"
+        alt="Trees"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Trees</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/WIND.jpg"
+        alt="Wind Turbines"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Wind Turbines</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/CARS.jpg"
+        alt="Cars and Trucks"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Cars and Trucks</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/Helicopters.jpg"
+        alt="Helicopters"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Helicopters</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/boat-hull.jpg"
+        alt="Boat Hulls"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Boat Hulls</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/tanks-vessels.jpg"
+        alt="Tanks & Vessels"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Tanks & Vessels</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/staircase.jpg"
+        alt="Staircases"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Staircases</p>
+    </div>
+    <div className="flex flex-col items-center relative">
+      <NcImage
+        className="w-full lg:h-58 xl:h-64 rounded-lg object-cover"
+        src="/assets/services/LO3D2.jpg"
+        alt="Statues"
+      />
+      <p className="text-base text-neutral-700 dark:text-neutral-300 mt-2">Statues</p>
+    </div>
+  </div>
+</section>
+
 
       <section className="accuracy-section space-y-4">
         <h2 className="text-2xl md:text-3xl font-semibold">How Accurate Are the Scans?</h2>

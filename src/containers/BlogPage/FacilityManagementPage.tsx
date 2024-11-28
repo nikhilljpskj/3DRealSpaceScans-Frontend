@@ -1,14 +1,14 @@
 import React from "react";
 import NcImage from "shared/NcImage/NcImage"; 
-
 import { Link } from 'react-router-dom';
 
 const FacilityManagementPage: React.FC = () => {
   return (
     <div className="facility-management-page space-y-16 p-8 lg:p-16 bg-gray-50 dark:bg-gray-900 text-neutral-900 dark:text-neutral-100">
+
       {/* Hero Section */}
       <header className="hero-section text-center space-y-6">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-600 dark:text-blue-400">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-neutral-800 dark:text-neutral-200">
           Facility Management 3D Laser Scanning
         </h1>
         <p className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400">
@@ -18,7 +18,7 @@ const FacilityManagementPage: React.FC = () => {
 
       {/* Hero Image */}
       <NcImage
-        className="w-full rounded-lg shadow-md"
+        className="w-full rounded-lg shadow-md max-w-3xl mx-auto"
         containerClassName="container mx-auto my-10"
         src="/assets/services/FM3D.jpg"
         alt="Facility Management 3D Laser Scanning Hero"
@@ -27,7 +27,7 @@ const FacilityManagementPage: React.FC = () => {
       {/* Unlock Efficiency Section */}
       <section className="intro-section grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400">
+          <h2 className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
             Unlock Operational Efficiency with 3D Laser Scanning
           </h2>
           <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-300 mt-4">
@@ -42,7 +42,7 @@ const FacilityManagementPage: React.FC = () => {
           </ul>
         </div>
         <NcImage
-          className="rounded-lg shadow-md"
+          className="rounded-lg shadow-md max-w-sm mx-auto"
           src="/assets/services/FM3D3.jpg"
           alt="Operational Efficiency with 3D Scanning"
         />
@@ -50,7 +50,7 @@ const FacilityManagementPage: React.FC = () => {
 
       {/* Why Choose Us Section */}
       <section className="benefits-section space-y-8">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-blue-600 dark:text-blue-400">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-neutral-800 dark:text-neutral-200">
           Why Choose 3DRealspace Scans for Facility Management?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -75,7 +75,7 @@ const FacilityManagementPage: React.FC = () => {
             </ul>
           </div>
           <NcImage
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md max-w-sm mx-auto"
             src="/assets/services/FM3D2.jpg"
             alt="Why Choose Us for Facility Scanning"
           />
@@ -84,7 +84,7 @@ const FacilityManagementPage: React.FC = () => {
 
       {/* BIM for Facility Management Section */}
       <section className="bim-section space-y-8">
-        <h2 className="text-2xl md:text-3xl font-semibold text-blue-600 dark:text-blue-400">
+        <h2 className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
           The Advantages of BIM for Facility Management
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -105,7 +105,7 @@ const FacilityManagementPage: React.FC = () => {
             </ul>
           </div>
           <NcImage
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md max-w-sm mx-auto"
             src="/assets/services/FM3D1.jpg"
             alt="BIM Benefits for Facility Management"
           />
@@ -113,8 +113,8 @@ const FacilityManagementPage: React.FC = () => {
       </section>
 
       {/* Digital Twins Section */}
-      <section className="digital-twins-section space-y-8 bg-blue-50 dark:bg-blue-900 p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-blue-600 dark:text-blue-400">
+      <section className="digital-twins-section space-y-8 bg-neutral-100 dark:bg-neutral-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-neutral-800 dark:text-neutral-200">
           Advanced Facility Management Using Digital Twins
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -134,7 +134,7 @@ const FacilityManagementPage: React.FC = () => {
             </ul>
           </div>
           <NcImage
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md max-w-sm mx-auto"
             src="/assets/services/FM3D4.jpg"
             alt="Digital Twins for Facility Management"
           />
@@ -142,8 +142,8 @@ const FacilityManagementPage: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="cta-section text-center space-y-6 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+      <section className="cta-section text-center space-y-6 bg-neutral-100 dark:bg-neutral-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200">
           Ready to Elevate Your Facility Management?
         </h2>
         <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-300">

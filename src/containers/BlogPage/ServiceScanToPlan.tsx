@@ -18,9 +18,10 @@ const ScanToPlanPage: React.FC = () => {
       {/* Hero Image */}
       <NcImage
         className="w-full rounded-xl"
-        containerClassName="container my-10 sm:my-12"
+        containerClassName="container my-8 sm:my-10" // Reduced margins for better spacing
         src="/assets/services/STP.jpg" // Replace with your image path
         alt="Scan to Plan Service"
+        style={{ objectFit: 'cover', height: 'auto' }} // Ensure the image scales properly
       />
 
       {/* Intro Section */}
@@ -44,6 +45,7 @@ const ScanToPlanPage: React.FC = () => {
           containerClassName="lg:w-1/2"
           src="/assets/services/STP2.jpg" // Replace with your image path
           alt="Scan to Plan Process"
+          style={{ objectFit: 'cover', height: '300px' }} // Adjusted height for visual consistency
         />
       </section>
 
@@ -97,6 +99,7 @@ const ScanToPlanPage: React.FC = () => {
           containerClassName="lg:w-1/2"
           src="/assets/services/STP1.jpg" // Replace with your image path
           alt="Scan-to-Plan Applications"
+          style={{ objectFit: 'cover', height: 'auto' }}
         />
         <div className="lg:w-1/2 space-y-4">
           <h2 className="text-2xl md:text-3xl font-semibold">What Can Be Scanned?</h2>

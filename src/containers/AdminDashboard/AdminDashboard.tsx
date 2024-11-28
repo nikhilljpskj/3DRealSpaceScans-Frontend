@@ -54,7 +54,7 @@ const AdminDashboard: React.FC = () => {
             {
                 label: "Bookings Count",
                 data: [pendingCount, allCount, pendingCount],
-                backgroundColor: ["rgba(75, 192, 192, 0.5)", "rgba(153, 102, 255, 0.5)", "rgba(250, 212, 205, 0.5)"],
+                backgroundColor: ["#007BFF", "#28A745", "#FFC107"], // Muted blue, green, and yellow
             },
         ],
     };
@@ -64,40 +64,40 @@ const AdminDashboard: React.FC = () => {
         datasets: [
             {
                 data: [pendingCount, allCount - pendingCount],
-                backgroundColor: ["#36A2EB", "#FF6384"],
+                backgroundColor: ["#007BFF", "#ffcc00"], // Blue and muted gray
             },
         ],
     };
 
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-green-200 to-blue-300">
+        <div className="flex min-h-screen bg-gradient-to-r from-gray-100 to-gray-200">
             <LeftNavbar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 ml-64"> {/* Adjusted margin-left */}
+            <div className="flex-1 ml-64">
                 <TopNavbar sidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-                <div className="p-8 space-y-6"> {/* Adjusted padding and removed extra margins */}
+                <div className="p-8 pt-16 space-y-6">
                     <header className="flex justify-between items-center mb-8">
-                        <h1 className="text-3xl font-bold text-gray-800">Admin Dashboard</h1>
+                        {/* <h1 className="text-3xl font-bold text-gray-800">Admin Dashboard</h1> */}
                     </header>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Pending Bookings Section */}
-                        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+                        <div className="bg-white p-3 rounded-lg shadow-md flex flex-col items-center justify-center">
                             <h3 className="text-xl font-semibold text-gray-700 mb-2 text-center">
                                 Pending Bookings 
-                                <span className="bg-red-500 text-white rounded-full px-3 py-1 ml-2">
+                                <span className="bg-blue-500 text-white rounded-full px-3 py-1 ml-2">
                                     {pendingCount}
                                 </span>
                             </h3>
                         </div>
 
                         {/* All Bookings Section */}
-                        <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+                        <div className="bg-white p-3 rounded-lg shadow-md flex flex-col items-center justify-center">
                             <h3 className="text-xl font-semibold text-gray-700 mb-2 text-center">
                                 All Bookings 
-                                <span className="bg-red-500 text-white rounded-full px-3 py-1 ml-2">
+                                <span className="bg-green-500 text-white rounded-full px-3 py-1 ml-2">
                                     {allCount}
                                 </span>
-                            </h3>
+                            </h3>   
                         </div>
                     </div>
 

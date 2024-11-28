@@ -69,31 +69,33 @@ const AccountPage: React.FC = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-green-200 to-blue-300">
+        <div className="flex min-h-screen bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200">
             <LeftNavbar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 ml-64">
                 <TopNavbar sidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-                <div className="p-6 mt-16"> 
-                    <h2 className="text-3xl font-semibold mb-6">Profile</h2>
-                    <div className="flex-grow max-w-3xl space-y-6 bg-white shadow-lg rounded-lg p-6">
+                <div className="p-6 mt-16">
+                    <h2 className="text-4xl font-semibold mb-6 text-gray-800">Profile</h2>
+                    <div className="flex-grow max-w-3xl space-y-6 bg-white shadow-xl rounded-lg p-6">
                         <div>
                             <Label>Name</Label>
-                            <Input className="mt-1.5" name="updateFullName" value={userDetails.updateFullName} onChange={handleChange} />
+                            <Input className="mt-1.5 border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200" name="updateFullName" value={userDetails.updateFullName} onChange={handleChange} />
                         </div>
                         <div>
                             <Label>Email</Label>
-                            <Input className="mt-1.5" name="updateEmail" value={userDetails.updateEmail} onChange={handleChange} />
+                            <Input className="mt-1.5 border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200" name="updateEmail" value={userDetails.updateEmail} onChange={handleChange} />
                         </div>
                         <div>
                             <Label>Phone number</Label>
-                            <Input className="mt-1.5" name="updateMobile" value={userDetails.updateMobile} onChange={handleChange} />
+                            <Input className="mt-1.5 border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200" name="updateMobile" value={userDetails.updateMobile} onChange={handleChange} />
                         </div>
                         <div>
                             <Label>Update Password</Label>
-                            <Input className="mt-1.5" name="updatePassword" type="password" value={userDetails.updatePassword} onChange={handleChange} />
+                            <Input className="mt-1.5 border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200" name="updatePassword" type="password" value={userDetails.updatePassword} onChange={handleChange} />
                         </div>
                         <div className="pt-2">
-                            <ButtonPrimary onClick={handleUpdate}>Update info</ButtonPrimary>
+                            <ButtonPrimary onClick={handleUpdate} className="bg-teal-500 hover:bg-teal-600 text-white">
+                                Update Info
+                            </ButtonPrimary>
                         </div>
                     </div>
                 </div>

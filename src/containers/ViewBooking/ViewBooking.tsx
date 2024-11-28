@@ -62,11 +62,11 @@ const ViewBooking: React.FC = () => {
     const getStatusTextAndStyle = (status: number) => {
         switch (status) {
             case 0:
-                return { text: 'Pending', style: 'bg-yellow-300' };
+                return { text: 'Pending', style: 'bg-yellow-400 text-white' };
             case 1:
-                return { text: 'Viewed', style: 'bg-green-300' };
+                return { text: 'Viewed', style: 'bg-green-400 text-white' };
             default:
-                return { text: 'Unknown', style: 'bg-gray-200' };
+                return { text: 'Unknown', style: 'bg-gray-300 text-black' };
         }
     };
 
@@ -84,23 +84,23 @@ const ViewBooking: React.FC = () => {
     const totalPages = Math.ceil(filteredBookings.length / itemsPerPage);
 
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-green-200 to-blue-300">
+        <div className="flex min-h-screen bg-gray-100">
             <LeftNavbar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 ml-64">
                 <TopNavbar sidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
                 <div className="p-8 mt-16">
-                <div className="flex justify-between items-center mb-6">
-                    <h1 className="text-3xl font-semibold text-gray-800">All Bookings</h1>
-                    <div className="relative">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="border rounded-full px-4 py-2 w-68"
-                        />
+                    <div className="flex justify-between items-center mb-6">
+                        <h1 className="text-3xl font-semibold text-gray-800">All Bookings</h1>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="border rounded-full px-4 py-2 w-64 text-gray-700"
+                            />
+                        </div>
                     </div>
-                </div>
 
                     <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
                         <table className="min-w-full table-auto">
@@ -119,12 +119,12 @@ const ViewBooking: React.FC = () => {
                                 {currentBookings.map((booking) => {
                                     const { text, style } = getStatusTextAndStyle(booking.status);
                                     return (
-                                        <tr key={booking.id} className="border-b hover:bg-gray-100">
-                                            <td className="py-4 px-6">{booking.fullName}</td>
-                                            <td className="py-4 px-6">{booking.email}</td>
-                                            <td className="py-4 px-6">{booking.phone}</td>
-                                            <td className="py-4 px-6">{new Date(booking.preferredDate).toLocaleDateString()}</td>
-                                            <td className="py-4 px-6">
+                                        <tr key={booking.id} className="border-b hover:bg-gray-50">
+                                            <td className="py-2 px-6">{booking.fullName}</td>
+                                            <td className="py-2 px-6">{booking.email}</td>
+                                            <td className="py-2 px-6">{booking.phone}</td>
+                                            <td className="py-2 px-6">{new Date(booking.preferredDate).toLocaleDateString()}</td>
+                                            <td className="py-2 px-6">
                                                 {extractCoordinates(booking.serviceLocation) ? (
                                                     <a
                                                         href={extractCoordinates(booking.serviceLocation)}
@@ -138,13 +138,13 @@ const ViewBooking: React.FC = () => {
                                                     <span>{booking.serviceLocation}</span>
                                                 )}
                                             </td>
-                                            <td className={`py-4 px-6 text-center ${style}`}>
+                                            <td className={`py-2 px-6 text-center ${style}`}>
                                                 {text}
                                             </td>
-                                            <td className="py-4 px-6">
+                                            <td className="py-2 px-6">
                                                 <button
                                                     onClick={() => handleViewButtonClick(booking.id)}
-                                                    className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-150"
+                                                    className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-150"
                                                 >
                                                     View
                                                 </button>
@@ -160,11 +160,12 @@ const ViewBooking: React.FC = () => {
                             </div>
                         )}
                     </div>
+
                     <div className="flex justify-between mt-4">
                         <button
                             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                             disabled={currentPage === 1}
-                            className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-150"
+                            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-150"
                         >
                             Previous
                         </button>
@@ -172,7 +173,7 @@ const ViewBooking: React.FC = () => {
                         <button
                             onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                             disabled={currentPage === totalPages}
-                            className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-150"
+                            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-150"
                         >
                             Next
                         </button>

@@ -14,26 +14,26 @@ interface BookingDetail {
     fullName: string;
     email: string;
     phone: string;
-    contactMethod: string;  // New field
-    company: string;        // New field
+    contactMethod: string;
+    company: string;
     serviceLocation: string;
-    accessInstructions: string; // New field
-    scanType: string;       // New field
+    accessInstructions: string;
+    scanType: string;
     preferredDate: string;
-    backupDate: string;     // New field
-    purpose: string;        // New field
-    projectScope: string;   // New field
-    numberOfRooms: number;  // New field
-    outputFormats: string;   // New field
-    additionalServices: string; // New field
-    completionDate: string;  // New field
-    specialInstructions: string; // New field
-    budgetRange: string;     // New field
-    projectTimeline: string; // New field
-    deliveryPreferences: string; // New field
-    termsAccepted: boolean;   // New field
-    privacyConsent: boolean;   // New field
-    showcaseConsent: boolean;  // New field
+    backupDate: string;
+    purpose: string;
+    projectScope: string;
+    numberOfRooms: number;
+    outputFormats: string;
+    additionalServices: string;
+    completionDate: string;
+    specialInstructions: string;
+    budgetRange: string;
+    projectTimeline: string;
+    deliveryPreferences: string;
+    termsAccepted: boolean;
+    privacyConsent: boolean;
+    showcaseConsent: boolean;
     files: FileDetail[];
 }
 
@@ -85,133 +85,71 @@ const BookingDetails: React.FC = () => {
     };
 
     if (!booking) {
-        return <p className="text-center">Loading booking details...</p>;
+        return <p className="text-center text-xl text-gray-700">Loading booking details...</p>;
     }
 
     return (
-        <div className="flex min-h-screen bg-gradient-to-r from-green-200 to-blue-300">
+        <div className="flex min-h-screen">
             <LeftNavbar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 ml-64">
                 <TopNavbar sidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-                <div className="flex flex-col p-12 mt-20">
-                    <h1 className="text-3xl font-bold mb-4 text-gray-800">Booking Details</h1>
-                    <div className="mb-6 bg-white p-6 rounded-lg shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Name:</label>
-                                <p className="text-gray-800">{booking.fullName}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Email:</label>
-                                <p className="text-gray-800">{booking.email}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Phone:</label>
-                                <p className="text-gray-800">{booking.phone}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Contact Method:</label>
-                                <p className="text-gray-800">{booking.contactMethod}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Company:</label>
-                                <p className="text-gray-800">{booking.company}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Service Location:</label>
-                                {extractCoordinates(booking.serviceLocation) ? (
+                <div className="flex flex-col p-8 mt-20 space-y-6">
+                    <h1 className="text-3xl font-bold text-gray-800">Booking Details</h1>
+                    <div className="bg-white p-8 rounded-lg shadow-md space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* Booking Details */}
+                            {[
+                                { label: 'Name', value: booking.fullName },
+                                { label: 'Email', value: booking.email },
+                                { label: 'Phone', value: booking.phone },
+                                { label: 'Contact Method', value: booking.contactMethod },
+                                { label: 'Company', value: booking.company },
+                                { label: 'Service Location', value: extractCoordinates(booking.serviceLocation) ? (
                                     <a
                                         href={extractCoordinates(booking.serviceLocation)}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-blue-600 underline"
+                                        className="text-teal-500 hover:underline"
                                     >
-                                        Location
+                                        View Location
                                     </a>
-                                ) : (
-                                    <p className="text-gray-800">{booking.serviceLocation}</p>
-                                )}
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Access Instructions:</label>
-                                <p className="text-gray-800">{booking.accessInstructions}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Scan Type:</label>
-                                <p className="text-gray-800">{booking.scanType}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Preferred Date:</label>
-                                <p className="text-gray-800">{new Date(booking.preferredDate).toLocaleDateString()}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Backup Date:</label>
-                                <p className="text-gray-800">{new Date(booking.backupDate).toLocaleDateString()}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Purpose:</label>
-                                <p className="text-gray-800">{booking.purpose}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Project Scope:</label>
-                                <p className="text-gray-800">{booking.projectScope}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Number of Rooms:</label>
-                                <p className="text-gray-800">{booking.numberOfRooms}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Output Formats:</label>
-                                <p className="text-gray-800">{booking.outputFormats}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Additional Services:</label>
-                                <p className="text-gray-800">{booking.additionalServices}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Completion Date:</label>
-                                <p className="text-gray-800">{new Date(booking.completionDate).toLocaleDateString()}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Special Instructions:</label>
-                                <p className="text-gray-800">{booking.specialInstructions}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Budget Range:</label>
-                                <p className="text-gray-800">{booking.budgetRange}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Project Timeline:</label>
-                                <p className="text-gray-800">{booking.projectTimeline}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Delivery Preferences:</label>
-                                <p className="text-gray-800">{booking.deliveryPreferences}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Terms Accepted:</label>
-                                <p className="text-gray-800">{booking.termsAccepted ? 'Yes' : 'No'}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Privacy Consent:</label>
-                                <p className="text-gray-800">{booking.privacyConsent ? 'Yes' : 'No'}</p>
-                            </div>
-                            <div className="flex flex-col">
-                                <label className="font-semibold text-gray-600">Showcase Consent:</label>
-                                <p className="text-gray-800">{booking.showcaseConsent ? 'Yes' : 'No'}</p>
-                            </div>
+                                ) : booking.serviceLocation },
+                                { label: 'Access Instructions', value: booking.accessInstructions },
+                                { label: 'Scan Type', value: booking.scanType },
+                                { label: 'Preferred Date', value: new Date(booking.preferredDate).toLocaleDateString() },
+                                { label: 'Backup Date', value: new Date(booking.backupDate).toLocaleDateString() },
+                                { label: 'Purpose', value: booking.purpose },
+                                { label: 'Project Scope', value: booking.projectScope },
+                                { label: 'Number of Rooms', value: booking.numberOfRooms },
+                                { label: 'Output Formats', value: booking.outputFormats },
+                                { label: 'Additional Services', value: booking.additionalServices },
+                                { label: 'Completion Date', value: new Date(booking.completionDate).toLocaleDateString() },
+                                { label: 'Special Instructions', value: booking.specialInstructions },
+                                { label: 'Budget Range', value: booking.budgetRange },
+                                { label: 'Project Timeline', value: booking.projectTimeline },
+                                { label: 'Delivery Preferences', value: booking.deliveryPreferences },
+                                { label: 'Terms Accepted', value: booking.termsAccepted ? 'Yes' : 'No' },
+                                { label: 'Privacy Consent', value: booking.privacyConsent ? 'Yes' : 'No' },
+                                { label: 'Showcase Consent', value: booking.showcaseConsent ? 'Yes' : 'No' },
+                            ].map((detail, index) => (
+                                <div key={index} className="flex flex-col space-y-1">
+                                    <label className="font-semibold text-gray-700">{detail.label}:</label>
+                                    <p className="text-gray-800">{detail.value}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
-                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Uploaded Files</h2>
+                    {/* Files Section */}
+                    <h2 className="text-2xl font-semibold text-gray-800 mt-10">Uploaded Files</h2>
                     {booking.files && booking.files.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {booking.files.map((file, index) => (
-                                <div key={index} className="flex justify-between items-center border p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div key={index} className="flex justify-between items-center p-4 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-all">
                                     <span className="text-gray-800">{file.filename}</span>
                                     <button
                                         onClick={() => handleDownload(file.filePath)}
-                                        className="text-blue-500 hover:underline font-semibold"
+                                        className="text-teal-500 hover:underline font-semibold"
                                     >
                                         Download
                                     </button>
