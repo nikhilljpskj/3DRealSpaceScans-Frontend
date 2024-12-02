@@ -95,7 +95,7 @@ const ScanToPlanPage: React.FC = () => {
       {/* What Can Be Scanned Section */}
       <section className="what-can-be-scanned-section flex flex-col lg:flex-row items-center lg:space-x-8 space-y-8 lg:space-y-0">
         <NcImage
-          className="w-full rounded-xl"
+          className="rounded-lg shadow-md max-w-sm mx-auto"
           containerClassName="lg:w-1/2"
           src="/assets/services/STP1.jpg" // Replace with your image path
           alt="Scan-to-Plan Applications"
