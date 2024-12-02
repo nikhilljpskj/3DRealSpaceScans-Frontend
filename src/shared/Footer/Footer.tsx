@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
           <ul className="mt-5 space-y-4">
             <li>Email: monemails@gmail.com</li>
             <li>Phone: 818-533-8313</li>
-            <li>Address: Willington, California 689523, USA</li>
+            <li>Address: Van Nuys, California</li>
           </ul>
           {/* Social Icons displayed horizontally */}
           <div className="mt-6">

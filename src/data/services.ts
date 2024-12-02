@@ -16,7 +16,7 @@ export const SERVICES: TaxonomyType[] = [
       name: "Digital Twins for Construction & Architecture",
       desc: "Generate precise, scalable 3D models for construction projects, enabling real-time progress tracking, troubleshooting, and stakeholder collaboration.",
       taxonomy: "category",
-      thumbnail: "/assets/services/digital-twin.jpg",
+      thumbnail: "/assets/services/digital-twin-illustration.png",
     },
     {
       id: "3",

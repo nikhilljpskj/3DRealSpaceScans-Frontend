@@ -21,71 +21,46 @@ const IndustriesWeServe = () => {
   };
 
   const industryData = [
-    {
-      title: "Power Plant 3D Scanning",
-      description: "Our 3D scanning solutions offer precise mapping and visualization of power plants, enabling maintenance teams to detect potential issues, improve safety protocols, and plan refurbishments with unmatched accuracy.",
-      imagePath: "/assets/industries/power-plant.jpg",
-    },
-    {
-      title: "Factory 3D Scanning",
-      description: "We assist factories in optimizing layouts and streamlining operations by providing comprehensive 3D scans that reveal detailed spatial data and enable efficient space management and machinery placements.",
-      imagePath: "/assets/industries/factory.jpg",
-    },
-    {
-      title: "Ships & Boats",
-      description: "Our maritime 3D scanning services ensure accurate assessments of ship hulls and structural components, facilitating effective maintenance, retrofitting, and certification processes.",
-      imagePath: "/assets/industries/ships.jpg",
-    },
-    {
-      title: "Hospitals",
-      description: "Enhance healthcare infrastructure with our 3D scanning technology, providing a clear understanding of space utilization and supporting renovations without disrupting vital services.",
-      imagePath: "/assets/industries/hospitals.jpg",
-    },
-    {
-      title: "Cell Towers",
-      description: "Our 3D inspections help telecommunications companies ensure structural integrity and accurate equipment placement on cell towers, contributing to better network performance and reduced downtime.",
-      imagePath: "/assets/industries/cell-towers.jpg",
-    },
-    {
-      title: "Aerospace",
-      description: "We support the aerospace industry with precision 3D scans for design validation, component inspection, and assembly checks, ensuring top-notch performance and compliance with strict standards.",
-      imagePath: "/assets/industries/aerospace.jpg",
-    },
-    {
-      title: "Floor Flatness",
-      description: "Our floor flatness scanning services deliver reliable data for construction projects, ensuring floors meet quality and safety standards, which is crucial for high-load environments.",
-      imagePath: "/assets/industries/floor-flatness.jpg",
-    },
-    {
-      title: "Wind Turbines",
-      description: "We provide 3D scanning of wind turbines to help assess wear and tear, optimize maintenance schedules, and enhance the lifespan of these critical energy assets.",
-      imagePath: "/assets/industries/wind-turbines.jpg",
-    },
-    {
-      title: "3D Inspections",
-      description: "Our comprehensive 3D inspections cater to a variety of industries, offering precise, data-rich analyses for quality control, defect detection, and performance assessments.",
-      imagePath: "/assets/industries/3d-inspections.jpg",
-    },
-    {
-      title: "Staircases",
-      description: "From construction to renovation, our 3D scanning solutions ensure staircases are built or updated with precision and compliance with safety standards.",
-      imagePath: "/assets/industries/staircases.jpg",
-    },
-    {
-      title: "Roads and Bridges",
-      description: "Our advanced 3D scanning services provide detailed mapping and structural assessments of roads and bridges, assisting in maintenance planning, safety checks, and engineering projects.",
-      imagePath: "/assets/industries/roads-bridges.jpg",
-    },
-    {
-      title: "Tanks & Vessels",
-      description: "We help industries maintain tanks and vessels by offering internal and external 3D scans that highlight corrosion, structural issues, and help plan for efficient maintenance.",
-      imagePath: "/assets/industries/tanks-vessels.jpg",
-    },
-    {
-      title: "Theaters & Concert Halls",
-      description: "Our 3D scanning services for theaters and concert halls provide comprehensive space analysis for renovation planning, acoustical modeling, and optimal audience seating arrangements.",
-      imagePath: "/assets/industries/theaters.jpg",
-    },
+      {
+        "title": "Residential Real Estate 3D Scanning",
+        "description": "Transform the way properties are showcased with 3DRealSpace Scans. Our immersive, dimensionally accurate 3D models offer prospective buyers 24/7 access to open houses right from their devices. Showcase every detail of your listings in stunning clarity, making properties irresistible and boosting ready-to-buy interest.",
+        "imagePath": "/assets/industries/residential-real-estate.jpg"
+      },
+      {
+        "title": "Commercial Real Estate 3D Scanning",
+        "description": "Optimize your commercial real estate strategy with interactive 3D digital twins from 3DRealSpace Scans. Streamline facility management, enhance capital planning, and reduce vacancies with data-driven property insights. Whether you're showcasing office spaces or retail complexes, our solutions bring your portfolio to life online.",
+        "imagePath": "/assets/industries/commercial-real-estate.jpg"
+      },
+      {
+        "title": "Architectural, Engineering, and Construction Scans",
+        "description": "3DRealSpace Scans revolutionizes AEC workflows by integrating precise digital twins into every phase of your project. Detect potential issues early, enhance team collaboration, and streamline project timelines. Let our solutions minimize risk while maximizing efficiency for your design and construction needs.",
+        "imagePath": "/assets/industries/aec.jpg"
+      },
+      {
+        "title": "Insurance and Restoration 3D Scanning",
+        "description": "Simplify claims with 3DRealSpace Scans. Our accurate and transparent 3D documentation provides insurers with detailed, reliable property assessments. Whether it’s pre-claim evidence or post-damage restoration, we help you cut costs, save time, and close cases faster than ever before.",
+        "imagePath": "/assets/industries/insurance-restoration.jpg"
+      },
+      {
+        "title": "Facilities Management 3D Scanning",
+        "description": "Reimagine facilities management with 3DRealSpace Scans. Our comprehensive digital twins provide actionable insights, helping you optimize operations, manage maintenance remotely, and improve overall efficiency. Access your facilities anytime, anywhere, from any device.",
+        "imagePath": "/assets/industries/facilities-management.jpg"
+      },
+      {
+        "title": "Travel and Hospitality 3D Scanning",
+        "description": "Elevate guest experiences and increase bookings with 3DRealSpace Scans. Our immersive digital tours and AI-enhanced insights enable seamless marketing and operational improvements for hotels, resorts, and vacation rentals. Let potential guests explore your spaces like never before.",
+        "imagePath": "/assets/industries/travel-hospitality.jpg"
+      },
+      {
+        "title": "Manufacturing 3D Scanning",
+        "description": "Enhance manufacturing efficiency with 3DRealSpace Scans. Our 3D solutions support seamless site operations, improve training processes, and accelerate facility planning. Gain a competitive edge with accurate visualizations of your factory floors and workflows.",
+        "imagePath": "/assets/industries/manufacturing.jpg"
+      },
+      {
+        "title": "Government and Public Sector 3D Scanning",
+        "description": "3DRealSpace Scans provides government agencies with the tools to create detailed, photorealistic, and dimensionally accurate 3D models. From urban planning to disaster management, our solutions ensure compliance and provide unparalleled insights for critical infrastructure projects.",
+        "imagePath": "/assets/industries/public-sector.jpg"
+      }
   ];
   
 
