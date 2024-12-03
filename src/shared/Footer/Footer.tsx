@@ -27,6 +27,10 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "/3d-virtual-tours", label: "3D virtual tours" },
       { href: "/digital-twin", label: "Digital twins for construction & architecture" },
       { href: "/virtual-staging", label: "Virtual staging" },
+      { href: "/scan-to-bim", label: "Scan to BIM" },
+      { href: "/scan-to-plan", label: "Scan to Plan" },
+      { href: "/facility-management-scanning", label: "Facility Management Scanning" },
+      { href: "/large-object-scanning", label: "Large Object Scanning" },
     ],
   },
 ];
